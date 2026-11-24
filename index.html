@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Health + Performance Collaborative in Glendale, WI: a cooperative of independent health and fitness professionals. Find a coach or join the collaborative.">
+<link rel="canonical" href="https://glendalehpc.fit/">
+<meta property="og:title" content="Health + Performance Collaborative | Glendale, WI">
+<meta property="og:description" content="Independent coaches. One premium space. Find a coach or join the collaborative.">
+<meta property="og:url" content="https://glendalehpc.fit/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230e0e0e' stroke='%237DC142' stroke-width='5'/%3E%3Ctext x='32' y='41' font-size='24' font-family='Arial' font-weight='700' text-anchor='middle' fill='%237DC142'%3EHPC%3C/text%3E%3C/svg%3E">
+<title>Health + Performance Collaborative | Glendale, WI</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#7DC142;--green-light:#9DD962;--green-dark:#5a9630;--black:#0e0e0e;--charcoal:#1a1a1a;--dark:#222;--light-gray:#9a9a9a;--off-white:#f2f2f0;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:rgba(14,14,14,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(125,193,66,.12);transition:padding .3s}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-circle{width:40px;height:40px;border-radius:50%;border:2px solid var(--green);display:flex;align-items:center;justify-content:center;flex-direction:column;line-height:1}
+.nav-logo-circle span{font-family:'Bebas Neue';font-size:12px;color:var(--green);letter-spacing:.04em}
+.nav-logo-text{font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--off-white);line-height:1.4}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--light-gray);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--green)}
+.nav-cta{background:var(--green)!important;color:var(--black)!important;padding:8px 18px;border-radius:2px;font-weight:700!important}
+.nav-cta:hover{background:var(--green-light)!important}
+.nav-ig-link{display:flex;align-items:center;gap:5px}
+.nav-ig-link svg{width:14px;height:14px;fill:currentColor}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden;padding:120px 48px 80px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 50%,rgba(125,193,66,.08) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(125,193,66,.05) 0%,transparent 60%),linear-gradient(160deg,#111 0%,#0e0e0e 100%)}
+.hero-bg::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(125,193,66,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(125,193,66,.04) 1px,transparent 1px);background-size:60px 60px}
+.hero-content{position:relative;max-width:900px;text-align:center;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--green);margin-bottom:22px}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';display:block;width:26px;height:1px;background:var(--green);opacity:.6}
+h1.hero-title{font-family:'Bebas Neue';font-size:clamp(58px,10vw,118px);line-height:.9;letter-spacing:.02em;color:var(--white)}
+.hero-title .accent{color:var(--green);display:block}
+.hero-sub{font-size:19px;font-weight:300;line-height:1.8;color:var(--light-gray);max-width:540px;margin:20px auto 40px}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero-ig-wrap{margin-top:22px}
+.hero-ig{display:inline-flex;align-items:center;gap:8px;font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--light-gray);text-decoration:none;transition:color .2s}
+.hero-ig:hover{color:var(--green)}
+.hero-ig svg{width:15px;height:15px;fill:currentColor}
+.hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;font-family:'Barlow Condensed';font-size:9px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.22)}
+.scroll-line{width:1px;height:34px;background:linear-gradient(var(--green),transparent);animation:scrollpulse 1.8s ease-in-out infinite}
+@keyframes scrollpulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:var(--black);font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:14px 26px;border-radius:2px;transition:background .2s,transform .15s}
+.btn-primary:hover{background:var(--green-light);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--white);font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:14px 26px;border:1.5px solid rgba(255,255,255,.2);border-radius:2px;transition:border-color .2s,color .2s,transform .15s}
+.btn-outline:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+
+/* STAT BAR */
+.stat-bar{background:var(--green);padding:16px 48px;display:flex;justify-content:center;gap:0;overflow-x:auto}
+.stat-item{display:flex;align-items:center;gap:16px;padding:0 32px;border-right:1px solid rgba(0,0,0,.15)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Bebas Neue';font-size:36px;color:var(--black);line-height:1}
+.stat-label{font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.6);line-height:1.3;max-width:80px}
+
+/* LABELS & TITLES */
+.section-label{font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--green);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';display:block;width:18px;height:1px;background:var(--green)}
+.section-title{font-family:'Bebas Neue';font-size:clamp(38px,6vw,70px);line-height:.95;letter-spacing:.02em;color:var(--white);margin-bottom:20px}
+.section-body{font-size:17px;font-weight:300;line-height:1.85;color:var(--light-gray);max-width:580px}
+
+/* ABOUT */
+.about{background:var(--charcoal);padding:96px 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-visual{display:flex;align-items:center;justify-content:center}
+.about-ring{width:268px;height:268px;border-radius:50%;border:2px solid var(--green);display:flex;align-items:center;justify-content:center;position:relative}
+.about-ring::before{content:'';position:absolute;inset:12px;border-radius:50%;border:1px solid rgba(125,193,66,.2)}
+.about-ring-text{font-family:'Bebas Neue';font-size:19px;letter-spacing:.08em;color:var(--green);line-height:1.25;text-align:center}
+.about-ring-sub{font-family:'Barlow Condensed';font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--light-gray);margin-top:7px;text-align:center}
+.orbit{position:absolute;inset:-20px;border-radius:50%;animation:orbit 10s linear infinite}
+.orbit-dot{position:absolute;top:50%;left:0;width:8px;height:8px;border-radius:50%;background:var(--green);transform:translateY(-50%);box-shadow:0 0 10px var(--green)}
+@keyframes orbit{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.value-card{background:var(--dark);border:1px solid rgba(125,193,66,.08);border-left:3px solid var(--green);padding:16px 18px;border-radius:0 4px 4px 0;transition:background .2s}
+.value-card:hover{background:#282828}
+.value-card-title{font-family:'Barlow Condensed';font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:5px}
+.value-card-text{font-size:14px;font-weight:300;line-height:1.7;color:var(--light-gray)}
+
+/* LOCATION */
+.location{background:var(--black);padding:96px 48px}
+.location-inner{max-width:1180px;margin:0 auto}
+.map-wrap{margin-top:48px}.map-label a{color:inherit;text-decoration:none}.map-label a:hover{text-decoration:underline}.map-btn{margin-top:18px}
+.map-label{font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.map-frame{border-radius:4px;overflow:hidden;border:1px solid rgba(125,193,66,.14);height:360px}
+.map-frame iframe{width:100%;height:100%;border:none}
+.location-details{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.loc-card{background:var(--charcoal);border:1px solid rgba(125,193,66,.09);padding:22px;border-radius:4px}
+.loc-icon{width:34px;height:34px;background:rgba(125,193,66,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.loc-icon svg{width:16px;height:16px;fill:var(--green)}
+.loc-lbl{font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:7px}
+.loc-val{font-size:15px;font-weight:400;color:var(--white);line-height:1.7}
+.loc-val a{color:var(--green);text-decoration:none}
+.loc-val a:hover{text-decoration:underline}
+
+/* TRAINERS */
+.trainers{background:var(--charcoal);padding:96px 48px}
+.trainers-header{text-align:center;margin-bottom:56px}
+.trainers-header .section-label{justify-content:center}
+.trainers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px;max-width:1180px;margin:0 auto}
+.trainer-card{background:var(--dark);border:1px solid rgba(255,255,255,.06);border-radius:6px;overflow:hidden;transition:border-color .25s,transform .2s;display:flex;flex-direction:column}
+.trainer-card:hover{border-color:rgba(125,193,66,.28);transform:translateY(-4px)}
+.tc-top{background:linear-gradient(135deg,#1c2b10 0%,#1a1a1a 100%);padding:24px 26px 18px;display:flex;align-items:center;gap:18px;border-bottom:1px solid rgba(125,193,66,.1)}
+.tc-avatar{width:80px;height:80px;border-radius:50%;border:2.5px solid var(--green);background:rgba(125,193,66,.1);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:24px;color:var(--green);flex-shrink:0;overflow:hidden;box-shadow:0 0 0 4px rgba(125,193,66,.1)}
+.tc-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.tc-name{font-family:'Bebas Neue';font-size:24px;letter-spacing:.04em;color:var(--white);line-height:1;margin-bottom:4px}
+.tc-brand{font-family:'Barlow Condensed';font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.tc-body{padding:18px 26px;flex:1}
+.tc-bio{font-size:15px;font-weight:300;line-height:1.78;color:var(--light-gray);margin-bottom:14px}
+.tc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.tag{font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:2px;background:rgba(125,193,66,.07);border:1px solid rgba(125,193,66,.18);color:var(--green)}
+.tc-footer{padding:14px 26px 18px;border-top:1px solid rgba(255,255,255,.05);display:flex;gap:8px;flex-wrap:wrap}
+.tlink{display:inline-flex;align-items:center;gap:5px;font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--white);text-decoration:none;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:7px 14px;border-radius:2px;transition:background .2s,border-color .2s,color .2s}
+.tlink:hover{background:rgba(125,193,66,.1);border-color:rgba(125,193,66,.28);color:var(--green)}
+.tlink svg{width:11px;height:11px;fill:currentColor}
+
+/* FOR CLIENTS */
+.for-clients{background:var(--black);padding:96px 48px;position:relative;overflow:hidden}
+.for-clients::before{content:'CLIENTS';position:absolute;right:-40px;top:50%;transform:translateY(-50%) rotate(90deg);font-family:'Bebas Neue';font-size:180px;color:rgba(255,255,255,.02);pointer-events:none;white-space:nowrap}
+.clients-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;max-width:1180px;margin:0 auto}
+.clients-features{display:flex;flex-direction:column;gap:22px;margin-top:32px}
+.feature-row{display:flex;gap:16px;align-items:flex-start}
+.feature-icon{width:40px;height:40px;flex-shrink:0;background:rgba(125,193,66,.08);border:1px solid rgba(125,193,66,.18);border-radius:4px;display:flex;align-items:center;justify-content:center}
+.feature-icon svg{width:17px;height:17px;fill:var(--green)}
+.feature-text h4{font-family:'Barlow Condensed';font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:4px}
+.feature-text p{font-size:15px;font-weight:300;line-height:1.75;color:var(--light-gray)}
+.cta-card{background:var(--charcoal);border:1px solid rgba(125,193,66,.14);border-radius:4px;padding:40px 34px;text-align:center;position:relative;overflow:hidden}
+.cta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-dark))}
+.cta-card-title{font-family:'Bebas Neue';font-size:40px;letter-spacing:.03em;color:var(--white);margin-bottom:14px;line-height:1}
+.cta-card-body{font-size:16px;font-weight:300;line-height:1.82;color:var(--light-gray);margin-bottom:26px}
+.disc-tags{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07)}
+
+/* JOIN */
+.join{background:linear-gradient(135deg,#141e0c 0%,#0e0e0e 50%,#111 100%);border-top:1px solid rgba(125,193,66,.1);border-bottom:1px solid rgba(125,193,66,.1);padding:96px 48px;position:relative;overflow:hidden}
+.join::after{content:'';position:absolute;bottom:0;right:0;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(125,193,66,.06) 0%,transparent 70%);pointer-events:none}
+.join-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.perks{display:flex;flex-direction:column;gap:12px;margin:24px 0 32px}
+.perk{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:400;color:var(--off-white)}
+.perk-check{width:19px;height:19px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.perk-check svg{width:9px;height:9px;fill:var(--black)}
+.steps{display:flex;flex-direction:column;gap:0;position:relative}
+.steps::before{content:'';position:absolute;left:19px;top:24px;bottom:24px;width:1px;background:linear-gradient(var(--green),rgba(125,193,66,.1))}
+.step{display:flex;gap:18px;padding:18px 0}
+.step-num{width:40px;height:40px;flex-shrink:0;background:var(--green);color:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:20px;z-index:1}
+.step-content h4{font-family:'Barlow Condensed';font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--white);margin-bottom:5px;padding-top:8px}
+.step-content p{font-size:14px;font-weight:300;line-height:1.78;color:var(--light-gray)}
+
+/* ETHICS */
+.ethics-section{background:var(--black);padding:96px 48px}
+.ethics-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.ethics-list{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.ethics-item{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;background:var(--charcoal);border-radius:4px;border:1px solid rgba(125,193,66,.07);transition:border-color .2s}
+.ethics-item:hover{border-color:rgba(125,193,66,.2)}
+.ethics-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:8px;box-shadow:0 0 7px rgba(125,193,66,.5)}
+.ethics-item p{font-size:15px;font-weight:300;line-height:1.78;color:var(--light-gray)}
+.ethics-item strong{font-weight:600;color:var(--white)}
+
+/* FINAL CTA */
+.final-cta{background:var(--green);text-align:center;padding:96px 48px;position:relative;overflow:hidden}
+.final-cta::before{content:'HPC';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue';font-size:360px;color:rgba(0,0,0,.06);pointer-events:none;white-space:nowrap;line-height:1}
+.final-cta-title{font-family:'Bebas Neue';font-size:clamp(42px,7vw,86px);color:var(--black);line-height:.95;letter-spacing:.02em;margin-bottom:18px;position:relative}
+.final-cta-body{font-size:19px;font-weight:300;color:rgba(0,0,0,.58);max-width:480px;margin:0 auto 34px;line-height:1.78;position:relative}
+.final-cta-btns{position:relative;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-dark{display:inline-flex;align-items:center;gap:7px;background:var(--black);color:var(--green);font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:15px 28px;border-radius:2px;transition:background .2s,transform .15s}
+.btn-dark:hover{background:#1a1a1a;transform:translateY(-2px)}
+.btn-wo{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--black);font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:15px 28px;border:2px solid rgba(0,0,0,.25);border-radius:2px;transition:border-color .2s,transform .15s}
+.btn-wo:hover{border-color:var(--black);transform:translateY(-2px)}
+.btn-wo svg{width:14px;height:14px;fill:currentColor}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid rgba(125,193,66,.1);padding:36px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+.footer-logo{display:flex;align-items:center;gap:11px}
+.footer-logo-circle{width:36px;height:36px;border-radius:50%;border:2px solid var(--green);display:flex;align-items:center;justify-content:center}
+.footer-logo-circle span{font-family:'Bebas Neue';font-size:11px;color:var(--green);line-height:1;text-align:center}
+.footer-logo-name{font-family:'Barlow Condensed';font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--light-gray);line-height:1.5}
+.footer-ig{display:flex;align-items:center;gap:7px;font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--light-gray);text-decoration:none;transition:color .2s}
+.footer-ig:hover{color:var(--green)}
+.footer-ig svg{width:15px;height:15px;fill:currentColor}
+.footer-links{display:flex;gap:18px;list-style:none}
+.footer-links a{font-family:'Barlow Condensed';font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--light-gray);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:11px;font-weight:300;color:rgba(255,255,255,.18);letter-spacing:.04em}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up:nth-child(2){transition-delay:.1s}
+.fade-up:nth-child(3){transition-delay:.2s}
+.fade-up:nth-child(4){transition-delay:.3s}
+.fade-up:nth-child(5){transition-delay:.35s}
+
+/* SVG ICONS INLINE */
+.svg-link{width:12px;height:12px}
+.svg-ig{width:14px;height:14px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+nav{padding:12px 18px}
+.nav-links{display:none}
+.hero{padding:108px 18px 70px}
+.about,.join-inner,.clients-grid,.ethics-inner{grid-template-columns:1fr;gap:36px}
+.about,.location,.ethics-section,.trainers,.join,.for-clients,.final-cta{padding:68px 18px}
+.location-details{grid-template-columns:1fr}
+.values-grid{grid-template-columns:1fr}
+.trainers-grid{grid-template-columns:1fr}
+.stat-bar{padding:12px 18px;flex-wrap:wrap;gap:8px}
+.stat-item{border:none;padding:6px 10px}
+footer{flex-direction:column;text-align:center;padding:28px 18px}
+}
+.nav-toggle{display:none;background:none;border:1.5px solid rgba(125,193,66,.5);color:var(--green);font-family:'Barlow Condensed';font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;padding:8px 14px;border-radius:2px;cursor:pointer}
+@media(max-width:900px){.nav-toggle{display:block}.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(14,14,14,.98);padding:18px;gap:16px;border-bottom:1px solid rgba(125,193,66,.2)}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top">
+  <a href="#top" class="nav-logo">
+    <div class="nav-logo-circle"><span>H<br>P<br>C</span></div>
+    <div class="nav-logo-text">Health + Performance<br>Collaborative</div>
+  </a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">Menu</button>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#trainers">Coaches</a></li>
+    <li><a href="#clients">Find a Coach</a></li>
+    <li><a href="#join">Join HPC</a></li>
+    <li class="nav-ig-link">
+      <a href="https://www.instagram.com/glendalehpc" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:5px;color:var(--light-gray);text-decoration:none;font-family:'Barlow Condensed';font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:color .2s" onmouseover="this.style.color='#7DC142'" onmouseout="this.style.color='var(--light-gray)'">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @glendalehpc
+      </a>
+    </li>
+    <li><a href="#join" class="nav-cta">Apply Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Glendale, Wisconsin · Health + Performance Collaborative</div>
+    <h1 class="hero-title">Where Elite<br><span class="accent">Coaching</span><br>Meets Community</h1>
+    <p class="hero-sub">A professional cooperative of independent health and fitness experts united by a shared premium space and a shared commitment to excellence.</p>
+    <div class="hero-actions">
+      <a href="#trainers" class="btn-primary">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        Meet the Coaches
+      </a>
+      <a href="#join" class="btn-outline">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+        Join the Collaborative
+      </a>
+    </div>
+    <div class="hero-ig-wrap">
+      <a href="https://www.instagram.com/glendalehpc" target="_blank" rel="noopener" class="hero-ig">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Follow us @glendalehpc
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-item"><div class="stat-num">7+</div><div class="stat-label">Expert Coaches</div></div>
+  <div class="stat-item"><div class="stat-num">8K</div><div class="stat-label">Sq Ft Premium Space</div></div>
+  <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Training Zones</div></div>
+  <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Yrs Combined Exp.</div></div>
+</div>
+
+<!-- ABOUT -->
+<div class="about" id="about">
+  <div class="about-visual fade-up">
+    <div class="about-ring">
+      <div class="orbit"><div class="orbit-dot"></div></div>
+      <div><div class="about-ring-text">HEALTH<br>+<br>PERFORMANCE<br>COLLABORATIVE</div><div class="about-ring-sub">Glendale, WI 53212</div></div>
+    </div>
+  </div>
+  <div class="fade-up">
+    <div class="section-label">Who We Are</div>
+    <h2 class="section-title">One Space.<br>Many Experts.</h2>
+    <p class="section-body">The HPC is a professional cooperative where independent health and fitness coaches run their own businesses under one roof. What happens to one of us affects us all — shared standards, shared space, shared success.</p>
+    <div class="values-grid">
+      <div class="value-card"><div class="value-card-title">Professionalism</div><p class="value-card-text">Every member is certified, insured, and held to the highest standards.</p></div>
+      <div class="value-card"><div class="value-card-title">Respect</div><p class="value-card-text">We honor each other's zones, clients, and expertise.</p></div>
+      <div class="value-card"><div class="value-card-title">Accountability</div><p class="value-card-text">Clean space, honest work. We own our responsibilities.</p></div>
+      <div class="value-card"><div class="value-card-title">Community</div><p class="value-card-text">Independent businesses, collective strength.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="location-inner">
+    <div class="fade-up">
+      <div class="section-label">Find Us</div>
+      <h2 class="section-title">Visit the HPC</h2>
+      <p class="section-body">Located in Glendale, Wisconsin. Off Port Washington Rd on Olive Street — second driveway, second door, second floor. Look for the HPC logo and park in the Reserved for Training Center spaces.</p>
+    </div>
+    <div class="map-wrap fade-up">
+      <div class="map-label"><a href="https://www.google.com/maps/search/?api=1&query=4170+N+Port+Washington+Rd+Glendale+WI+53212" target="_blank" rel="noopener">📍 Interactive Map — Open in Google Maps ↗</a></div>
+      <div class="map-frame">
+        <iframe title="Map of the Health + Performance Collaborative, 4170 N Port Washington Rd, Glendale, WI" src="https://www.google.com/maps?q=4170+N+Port+Washington+Rd,+Glendale,+WI+53212&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=4170+N+Port+Washington+Rd+Glendale+WI+53212" target="_blank" rel="noopener" class="btn-primary map-btn">Open in Google Maps</a>
+    </div>
+    <div class="location-details fade-up">
+      <div class="loc-card">
+        <div class="loc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <div class="loc-lbl">Address</div>
+        <div class="loc-val">4170 N Port Washington Rd<br>Glendale, WI 53212<br><br><a href="https://www.google.com/maps/search/?api=1&query=4170+N+Port+Washington+Rd+Glendale+WI+53212" target="_blank" rel="noopener">Get Directions →</a></div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon"><svg viewBox="0 0 24 24"><path d="M13 9h-2V7h2m0 10h-2v-6h2m-1-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg></div>
+        <div class="loc-lbl">How to Find Us</div>
+        <div class="loc-val">Off Olive St from Port Washington Rd. Second driveway · Second door · Second floor. Elevator access available through DOC door east of main entrance.</div>
+      </div>
+      <div class="loc-card">
+        <div class="loc-icon"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
+        <div class="loc-lbl">Contact &amp; Inquiries</div>
+        <div class="loc-val"><a href="mailto:glendalehpc@gmail.com?subject=Inquiry%20from%20glendalehpc.fit">glendalehpc@gmail.com</a><br><a href="https://www.instagram.com/glendalehpc" target="_blank" rel="noopener">@glendalehpc</a> on Instagram</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINERS -->
+<section class="trainers" id="trainers">
+  <div class="trainers-header fade-up">
+    <div class="section-label">Our Coaches</div>
+    <h2 class="section-title">Meet the Collaborative</h2>
+    <p class="section-body" style="margin:0 auto;text-align:center">Independent experts. Unified standards. Every HPC coach runs their own business and brings unique expertise to our shared space.</p>
+  </div>
+
+  <div class="trainers-grid">
+
+    <!-- GARRETT STANGEL -->
+    <div class="trainer-card fade-up">
+      <div class="tc-top">
+        <div class="tc-avatar"><img src="https://lirp.cdn-website.com/808b2e41/dms3rep/multi/opt/imgi_3_pic-1920w.jpeg" alt="Garrett Stangel" onerror="this.style.display='none';this.parentElement.innerHTML='GS'"></div>
+        <div><div class="tc-name">Garrett Stangel</div><div class="tc-brand">Balance by Garrett</div></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-bio">With nearly 30 years of experience, Garrett specializes in personalized fitness training, wellness coaching, group fitness, and nutrition. His holistic approach — covering movement, nutrition, stress, and sleep — helps clients find their balance through customized programming tailored to their lifestyle.</p>
+        <div class="tc-tags"><span class="tag">Personal Training</span><span class="tag">Wellness Coaching</span><span class="tag">Group Fitness</span><span class="tag">Nutrition</span></div>
+      </div>
+      <div class="tc-footer">
+        <a href="https://balancebygarrett.coach" target="_blank" rel="noopener" class="tlink"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>balancebygarrett.coach</a>
+      </div>
+    </div>
+
+    <!-- ABBY PANOSH -->
+    <div class="trainer-card fade-up">
+      <div class="tc-top">
+        <div class="tc-avatar">AP</div>
+        <div><div class="tc-name">Abby Panosh</div><div class="tc-brand">FitSourceMKE</div></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-bio">A beloved Milwaukee fitness expert with 20+ years of experience, Abby holds a BS in Wellness & Health Promotion and an MS in Human Resources. ACE Certified, she specializes in post-rehab, balance, posture, and clients with medical challenges — working with everyone from teens to seniors.</p>
+        <div class="tc-tags"><span class="tag">Post-Rehab</span><span class="tag">Active Aging</span><span class="tag">Balance & Posture</span><span class="tag">Health Coaching</span></div>
+      </div>
+      <div class="tc-footer">
+        <a href="https://fitsourcemke.com" target="_blank" rel="noopener" class="tlink"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>fitsourcemke.com</a>
+      </div>
+    </div>
+
+    <!-- SARAH ADDEO -->
+    <div class="trainer-card fade-up">
+      <div class="tc-top">
+        <div class="tc-avatar">SA</div>
+        <div><div class="tc-name">Sarah Addeo</div><div class="tc-brand">SarahFit MKE</div></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-bio">A Milwaukee fitness legend who opened the city's first fitness studio in 1996. With roots in the Alvin Ailey American Dance Theater and elite studios in New York and LA, Sarah brings electric energy to group and individual fitness. Classes include Cardio Kick, Barre, HIIT, Tread Blast, and Metabolic.</p>
+        <div class="tc-tags"><span class="tag">Group Fitness</span><span class="tag">Cardio Kick</span><span class="tag">Barre</span><span class="tag">HIIT</span><span class="tag">Dance</span></div>
+      </div>
+      <div class="tc-footer">
+        <a href="https://www.sarahfitmke.com" target="_blank" rel="noopener" class="tlink"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>sarahfitmke.com</a>
+      </div>
+    </div>
+
+    <!-- JEVONTE SHACKLEFORD -->
+    <div class="trainer-card fade-up">
+      <div class="tc-top">
+        <div class="tc-avatar"><img src="https://shackfitnessllc.com/cdn/shop/files/IMG_1844_600x.jpg?v=1699970595" alt="Jevonti Shackleford" onerror="this.style.display='none';this.parentElement.innerHTML='JS'"></div>
+        <div><div class="tc-name">Jevonti Shackleford</div><div class="tc-brand">Shack Fitness</div></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-bio">Known as "Shack," Jevonti has been transforming clients through personal training since 2014 — and his clients see results within weeks. He runs ShackCamp, a judgment-free group fitness class focused on HIIT, muscle-building, and building a genuinely fit and healthy lifestyle for the long term.</p>
+        <div class="tc-tags"><span class="tag">Personal Training</span><span class="tag">HIIT</span><span class="tag">Group Fitness</span><span class="tag">ShackCamp</span></div>
+      </div>
+      <div class="tc-footer">
+        <a href="https://shackfitnessllc.com" target="_blank" rel="noopener" class="tlink"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>shackfitnessllc.com</a>
+      </div>
+    </div>
+
+    <!-- JORDAN MEYER -->
+    <div class="trainer-card fade-up">
+      <div class="tc-top">
+        <div class="tc-avatar">JM</div>
+        <div><div class="tc-name">Jordan Meyer</div><div class="tc-brand">Optimized Body Work</div></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-bio">Jordan's training is built on a "ground up" proprioception-based philosophy — prioritizing functional movement quality and core stability above all else. He specializes in strength training, cardio conditioning, sport-specific programming, suspension training, and injury prevention for driven clients who demand more from their body.</p>
+        <div class="tc-tags"><span class="tag">Functional Movement</span><span class="tag">Core Stability</span><span class="tag">Strength Training</span><span class="tag">Injury Prevention</span></div>
+      </div>
+      <div class="tc-footer">
+        <a href="mailto:glendalehpc@gmail.com?subject=Inquiry%20for%20Jordan%20Meyer%20-%20Optimized%20Body%20Work" class="tlink">Contact via HPC</a>
+      </div>
+    </div>
+
+    <!-- MARSHAL STICH -->
+    <div class="trainer-card fade-up">
+      <div class="tc-top">
+        <div class="tc-avatar">MS</div>
+        <div><div class="tc-name">Marshal Stich</div><div class="tc-brand">Fit Guide Coaching</div></div>      </div>
+      <div class="tc-body">
+        <p class="tc-bio">A UW-Milwaukee Kinesiology graduate, Marshal helps men and women build strength, confidence, and a leaner physique through practical, science-backed fitness and nutrition guidance. He offers personal training, habit-based nutrition coaching, and weekly support — both in-person at the HPC and online.</p>
+        <div class="tc-tags"><span class="tag">Strength Training</span><span class="tag">Nutrition Coaching</span><span class="tag">Habit Building</span><span class="tag">Online Coaching</span></div>
+      </div>
+      <div class="tc-footer">
+        <a href="https://www.linkedin.com/in/marshal-stich-937182116/" target="_blank" rel="noopener" class="tlink"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn Profile</a>
+        <a href="https://www.instagram.com/fit_guide_marsh/" target="_blank" rel="noopener" class="tlink">@fit_guide_marsh</a>
+      </div>
+    </div>
+
+    <!-- THOMSON REMO -->
+    <div class="trainer-card fade-up">
+      <div class="tc-top">
+        <div class="tc-avatar"><img src="https://images.squarespace-cdn.com/content/v1/66ce9a8a48ec08536ac7e915/a13db173-96d1-4180-b1f7-9636f7b1ef68/527803510_10238429514614151_7988553434026427794_n+%281%29.jpg" alt="Thomson Remo" onerror="this.style.display='none';this.parentElement.innerHTML='TR'"></div>
+        <div><div class="tc-name">Thomson Remo</div><div class="tc-brand">Thomson Remo Personal Training</div></div>
+      </div>
+      <div class="tc-body">
+        <p class="tc-bio">A world-class strength & conditioning consultant trusted by professional sports teams, universities, and performance facilities globally. Thomson is a 2x U.S. cycling champion, Global Lead Educator for Wattbike, Woodway, and Exerfly, and developed testing protocols used by USA Cycling and the NHL Combine.</p>
+        <div class="tc-tags"><span class="tag">Strength & Conditioning</span><span class="tag">Athletic Performance</span><span class="tag">Cycling Coaching</span><span class="tag">Sports Science</span></div>
+      </div>
+      <div class="tc-footer">
+        <a href="https://thomsonremo.com" target="_blank" rel="noopener" class="tlink"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>thomsonremo.com</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOR CLIENTS -->
+<section class="for-clients" id="clients">
+  <div class="clients-grid">
+    <div class="fade-up">
+      <div class="section-label">For Clients</div>
+      <h2 class="section-title">Access World-Class Coaching</h2>
+      <p class="section-body">The HPC is home to specialists across every dimension of health and performance. Whether you're chasing elite athletic goals, recovery, group fitness, or total wellness — your perfect coach is here.</p>
+      <div class="clients-features">
+        <div class="feature-row fade-up">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13.49 5.48c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-3.6 13.9l1-4.4 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.3 1.5 3.3 2.5 5.5 2.5v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1l-5.2 2.2v4.7h2v-3.4l1.8-.7-1.6 8.1-4.9-1-.4 2 7 1.4z"/></svg></div>
+          <div class="feature-text"><h4>Diverse Specialties</h4><p>Physio, group fitness, strength, body work, nutrition, sports performance, and more — all under one roof.</p></div>
+        </div>
+        <div class="feature-row fade-up">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div class="feature-text"><h4>Prime Glendale Location</h4><p>Accessible off Port Washington Rd. Elevator access available and reserved client parking on-site.</p></div>
+        </div>
+        <div class="feature-row fade-up">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg></div>
+          <div class="feature-text"><h4>Easy Online Scheduling</h4><p>Book sessions through Wellness Living Elevate. 100% of appointments are scheduled — your time is always respected.</p></div>
+        </div>
+        <div class="feature-row fade-up">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"/></svg></div>
+          <div class="feature-text"><h4>1-on-1 &amp; Group Options</h4><p>Personal training, small group sessions, and large group classes. Find the format that fits your lifestyle.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-card fade-up">
+      <div class="cta-card-title">Ready to Start?</div>
+      <p class="cta-card-body">The HPC has coaches ready to meet you exactly where you are. Browse our experts and connect directly with the right coach for your goals.</p>
+      <a href="#trainers" class="btn-primary" style="display:inline-flex">Browse Our Coaches</a>
+      <p class="cta-card-body" style="margin:18px 0 0;font-size:15px">Questions? <a href="mailto:glendalehpc@gmail.com?subject=Question%20for%20the%20HPC" style="color:var(--green)">glendalehpc@gmail.com</a></p>
+      <div class="disc-tags">
+        <span class="tag">Personal Training</span><span class="tag">Group Fitness</span><span class="tag">Post-Rehab</span><span class="tag">Nutrition</span><span class="tag">Sports Performance</span><span class="tag">Cycling</span><span class="tag">HIIT</span><span class="tag">Strength & Conditioning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="join" id="join">
+  <div class="join-inner">
+    <div class="fade-up">
+      <div class="section-label">For Fitness Professionals</div>
+      <h2 class="section-title">Run Your Business.<br>Grow With Ours.</h2>
+      <p class="section-body">The HPC gives independent health and fitness professionals a premium cooperative space to build and scale their businesses — without the overhead of running a facility alone.</p>
+      <div class="perks">
+        <div class="perk"><div class="perk-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>8,000 sq ft with 8+ dedicated training zones</div>
+        <div class="perk"><div class="perk-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>Pay rent only for the zones you actually use</div>
+        <div class="perk"><div class="perk-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>Keyless access via Masterlock Vault Enterprise app</div>
+        <div class="perk"><div class="perk-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>High-speed WiFi and shared premium equipment</div>
+        <div class="perk"><div class="perk-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>Scheduling through Wellness Living Elevate platform</div>
+        <div class="perk"><div class="perk-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>Collaborative community of certified professionals</div>
+        <div class="perk"><div class="perk-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>Elevator access and reserved client parking</div>
+      </div>
+      <a href="mailto:glendalehpc@gmail.com?subject=Application%20to%20join%20the%20Health%20%2B%20Performance%20Collaborative&body=Hi%20HPC%2C%0A%0AName%3A%0ABusiness%20name%3A%0ASpecialty%3A%0ACertifications%3A%0AWebsite%2FInstagram%3A%0A%0AI%27d%20like%20to%20learn%20more%20about%20joining." class="btn-primary">Apply to Join the HPC</a>
+    </div>
+    <div class="fade-up">
+      <p style="font-family:'Barlow Condensed';font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--green);margin-bottom:20px">How It Works</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Apply & Connect</h4><p>Reach out to an HPC owner. We'll discuss your specialty, clients, and business vision to ensure a great collective fit.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Sign Your Lease</h4><p>Review and sign the member agreement. Keep certifications, CPR/AED, and professional liability insurance on file with HPC.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Get Full Access</h4><p>Once signed and paid, receive your Masterlock Vault app link and Wellness Living Elevate account to start scheduling.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Grow Your Business</h4><p>Schedule clients, reserve zones, and build the business you've always envisioned — with a community behind you.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ETHICS -->
+<section class="ethics-section">
+  <div class="ethics-inner">
+    <div class="fade-up">
+      <div class="section-label">Standards</div>
+      <h2 class="section-title">The HPC Code of Ethics</h2>
+      <p class="section-body">Every HPC member is held to a shared professional standard. When you work with an HPC coach, you're working with someone who takes their craft — and their community — seriously.</p>
+    </div>
+    <div class="ethics-list fade-up">
+      <div class="ethics-item"><div class="ethics-dot"></div><p><strong>Maintain current certifications</strong> in your field, CPR/AED and professional liability insurance — on file with the HPC at all times.</p></div>
+      <div class="ethics-item"><div class="ethics-dot"></div><p><strong>Be respectful of other coaches and clients,</strong> honoring zone boundaries so everyone can deliver their absolute best service.</p></div>
+      <div class="ethics-item"><div class="ethics-dot"></div><p><strong>Everything in its place.</strong> Wipe down and return equipment after every use. Clean common areas to reflect high standards.</p></div>
+      <div class="ethics-item"><div class="ethics-dot"></div><p><strong>Do right by your clients</strong> — be on time, be engaged, and deliver a safe, effective, professional service every session.</p></div>
+      <div class="ethics-item"><div class="ethics-dot"></div><p><strong>Accountability is collective.</strong> As a cooperative, what happens to one of us affects us all. Be a good member.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 class="final-cta-title">Your Next Move<br>Starts Here.</h2>
+  <p class="final-cta-body">Whether you're looking for expert coaching or ready to grow your fitness business — the Health and Performance Collaborative is where it happens.</p>
+  <div class="final-cta-btns">
+    <a href="#trainers" class="btn-dark">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+      Find a Coach
+    </a>
+    <a href="#join" class="btn-wo">Join the Collaborative</a>
+    <a href="mailto:glendalehpc@gmail.com?subject=Inquiry%20from%20glendalehpc.fit" class="btn-wo">Email Us</a>
+    <a href="https://www.instagram.com/glendalehpc" target="_blank" rel="noopener" class="btn-wo">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @glendalehpc
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-logo-circle"><span>H<br>P<br>C</span></div>
+    <div class="footer-logo-name">Health + Performance Collaborative<br>4170 N Port Washington Rd · Glendale, WI 53212</div>
+  </div>
+  <a href="https://www.instagram.com/glendalehpc" target="_blank" rel="noopener" class="footer-ig">
+    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    @glendalehpc
+  </a>
+  <a href="mailto:glendalehpc@gmail.com" class="footer-ig">glendalehpc@gmail.com</a>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#trainers">Coaches</a></li>
+    <li><a href="#join">Join HPC</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 Health + Performance Collaborative. All rights reserved.</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:.09, rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.padding = window.scrollY > 60 ? '9px 48px' : '14px 48px';
+});
+</script>
+</body>
+</html>
